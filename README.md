@@ -194,3 +194,16 @@ https://neovim.io/
 > | [MacPorts]     | `port install neovim` |
 
    </details>
+
+## Install Aerospace
+
+https://github.com/nikitabobko/AeroSpace
+
+   <details>
+   <summary>macOS</summary>
+
+> | Repository     | Instructions                                    |
+> | -------------- | ----------------------------------------------- |
+> | **[Homebrew]** | `brew install --cask nikitabobko/tap/aerospace` |
+
+   </details>
