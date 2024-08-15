@@ -167,3 +167,30 @@ https://github.com/eza-community/eza
 > | [nixpkgs]       | `nix-env -iA eza`   |
 
    </details>
+
+## Install NeoVim
+
+https://neovim.io/
+
+   <details>
+   <summary>Linux / WSL</summary>
+
+> | Distribution | Repository         | Instructions                  |
+> | ------------ | ------------------ | ----------------------------- |
+> | Arch Linux   | [Arch Linux Extra] | `pacman -S neovim`            |
+> | Manjaro      |                    | `pacman -S neovim`            |
+> | Ubuntu       |                    | `sudo apt-get install neovim` |
+
+   </details>
+
+   <details>
+   <summary>macOS</summary>
+
+> To install NeoVim, use a package manager:
+>
+> | Repository     | Instructions          |
+> | -------------- | --------------------- |
+> | **[Homebrew]** | `brew install neovim` |
+> | [MacPorts]     | `port install neovim` |
+
+   </details>
