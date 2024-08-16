@@ -8,8 +8,6 @@ https://www.gnu.org/software/stow/
 
 https://github.com/ajeetdsouza/zoxide
 
-zoxide runs on most major platforms.
-
    <details>
    <summary>Linux / WSL</summary>
 
