@@ -207,3 +207,8 @@ https://github.com/nikitabobko/AeroSpace
 > | **[Homebrew]** | `brew install --cask nikitabobko/tap/aerospace` |
 
    </details>
+
+## Install WezTerm
+
+https://github.com/wez/wezterm
+https://wezfurlong.org/wezterm/installation
