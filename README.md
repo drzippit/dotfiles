@@ -213,7 +213,7 @@ https://github.com/nikitabobko/AeroSpace
 https://github.com/wez/wezterm
 https://wezfurlong.org/wezterm/installation
 
-## Extra Info
+# Extra Info
 
 * Font: [Comic Code](https://tosche.net/fonts/comic-code)
 * Color Scheme: [ Cattpuchine Macchiato ](https://github.com/catppuccin/catppuccin)
