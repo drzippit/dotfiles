@@ -12,8 +12,11 @@ antidote load ${ZDOTDIR:-$HOME}/.config/zsh/zsh_plugins.txt
 # Load p10k if exists
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
+# Update path
+export PATH=$PATH:~/.local/bin:/opt/nvim-linux64/bin
+
 # Load shell integration
-source <(fzf --zsh)
+#source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # Aliases
