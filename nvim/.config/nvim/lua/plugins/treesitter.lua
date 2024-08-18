@@ -7,6 +7,7 @@ return {
         "bicep",
         "terraform",
         "hcl",
+        "go"
       })
     end,
   },
