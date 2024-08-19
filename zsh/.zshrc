@@ -15,6 +15,9 @@ antidote load ${ZDOTDIR:-$HOME}/.config/zsh/zsh_plugins.txt
 # Update path
 export PATH=$PATH:~/.local/bin:/opt/nvim-linux64/bin
 
+# Set nvim as editor
+export EDITOR=nvim
+
 # Load shell integration
 #source <(fzf --zsh)
 eval "$(zoxide init zsh)"
