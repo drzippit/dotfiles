@@ -27,6 +27,20 @@ alias vim="nvim"
 alias ls="eza --icons=always"
 alias ll="eza --icons=always -la"
 alias cd="z"
+# Terraform
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tfc='terraform console'
+alias tfd='terraform destroy'
+alias tff='terraform fmt'
+alias tfi='terraform init'
+alias tfiu='terraform init -upgrade'
+alias tfo='terraform output'
+alias tfp='terraform plan'
+alias tfv='terraform validate'
+alias tfs='terraform state'
+alias tft='terraform test'
+alias tfsh='terraform show'
 
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
