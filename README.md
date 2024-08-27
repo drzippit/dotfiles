@@ -1,5 +1,9 @@
 # Installation
 
+## Clone
+
+git clone --recurse-submodules https://github.com/drzippit/dotfiles.git
+
 ## Install Stow
 
 https://www.gnu.org/software/stow/
