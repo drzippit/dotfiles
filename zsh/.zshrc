@@ -42,6 +42,9 @@ alias tfs='terraform state'
 alias tft='terraform test'
 alias tfsh='terraform show'
 
+# ViM Distro's
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
