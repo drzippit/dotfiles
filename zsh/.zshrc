@@ -14,6 +14,7 @@ antidote load ${ZDOTDIR:-$HOME}/.config/zsh/zsh_plugins.txt
 
 # Update path
 export PATH=$PATH:~/.local/bin:/opt/nvim-linux64/bin
+export CDPATH=~/.config/nvim-custom/
 
 # Set nvim as editor
 export EDITOR=nvim
@@ -44,6 +45,8 @@ alias tfsh='terraform show'
 
 # ViM Distro's
 alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom
+alias nvc='NVIM_APPNAME=nvim-chad nvim' #NvChad
 
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
