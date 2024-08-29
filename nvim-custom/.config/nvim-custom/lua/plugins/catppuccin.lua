@@ -8,6 +8,9 @@ return {
 			require("catppuccin").setup({
 				flavour = "mocha",
 				transparent_background = true,
+				integrations = {
+					notify = true,
+				},
 			})
 		end,
 		config = function()
