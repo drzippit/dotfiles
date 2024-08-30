@@ -11,6 +11,16 @@ return {
 		lazy = false,
 		opts = {
 			auto_install = true,
+			ensure_installed = {
+				"lua_ls",
+				"terraformls",
+				"tflint",
+				"azure_pipelines_ls",
+				"bicep",
+				"gopls",
+				"tfsec",
+				"goimports",
+			},
 		},
 	},
 	{
