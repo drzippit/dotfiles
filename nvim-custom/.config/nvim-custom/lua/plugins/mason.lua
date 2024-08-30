@@ -18,8 +18,6 @@ return {
 				"azure_pipelines_ls",
 				"bicep",
 				"gopls",
-				"tfsec",
-				"goimports",
 			},
 		},
 	},
