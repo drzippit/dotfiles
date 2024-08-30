@@ -13,7 +13,8 @@ antidote load ${ZDOTDIR:-$HOME}/.config/zsh/zsh_plugins.txt
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # Update path
-export PATH=$PATH:~/.local/bin:/opt/nvim-linux64/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:~/.local/bin:/opt/nvim-linux64/bin:$GOPATH
 export CDPATH=~/.config/nvim-custom/
 
 # Set nvim as editor
