@@ -20,13 +20,13 @@ return {
 			require("mini.animate").setup()
 		end,
 	},
-	{
-		"echasnovski/mini.trailspace",
-		version = false,
-		opts = function()
-			require("mini.trailspace").setup()
-		end,
-	},
+	-- {
+	-- 	"echasnovski/mini.trailspace",
+	-- 	version = false,
+	-- 	opts = function()
+	-- 		require("mini.trailspace").setup()
+	-- 	end,
+	-- },
 	{
 		"echasnovski/mini.cursorword",
 		version = false,

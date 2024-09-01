@@ -3,11 +3,28 @@ return {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("telescope").setup({
+				pickers = {
+					find_files = {
+						find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
+						layout_config = {
+							height = 0.70,
+						},
+					},
+				},
+			})
+		end,
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope Find Files" },
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope live grep" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope Buffers" },
 			{ "<leader> ", "<cmd>Telescope buffers<cr>", desc = "Telescope Buffers" },
+			{
+				"<leader>fc",
+				"<cmd>lua require('telescope.builtin').find_files({ cwd = '~/.config/nvim-custom/' })<CR>",
+				desc = "Telescope config",
+			},
 		},
 	},
 	{
