@@ -55,6 +55,12 @@ return {
 				desc = "Open Terraform Doc Azurerm",
 				mode = "n",
 			},
+			{
+				"<leader>tm",
+				":RenderMarkdown toggle<cr>",
+				desc = "Toggle Markdown rendering",
+				mode = "n",
+			},
 			{ "<leader>j", group = "Jump" },
 			{
 				"<leader>jt",

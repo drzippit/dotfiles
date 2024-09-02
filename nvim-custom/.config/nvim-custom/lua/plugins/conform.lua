@@ -10,7 +10,7 @@ return {
 				rust = { "rustfmt", lsp_format = "fallback" },
 				-- Conform will run the first available formatter
 				javascript = { "prettierd", "prettier", stop_after_first = true },
-				terraform = { "terraform_fmt", "tflint" },
+				terraform = { "terraform_fmt" },
 			},
 		})
 	end,

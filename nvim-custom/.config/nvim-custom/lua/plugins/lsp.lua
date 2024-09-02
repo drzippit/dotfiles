@@ -5,9 +5,11 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
 			lspconfig.terraformls.setup({})
+			lspconfig.tflint.setup({})
 			lspconfig.gopls.setup({})
 			lspconfig.yamlls.setup({})
 			lspconfig.biceplsp.setup({})
+			lspconfig.marksman.setup({})
 		end,
 	},
 }
