@@ -26,6 +26,8 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.wo.relativenumber = true
 vim.wo.number = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -35,7 +37,8 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "havamax" } },
+	install = { colorscheme = { "catpuccin-mocha" } },
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	checker = { enabled = true, notify = false },
+	change_detection = { notify = false },
 })

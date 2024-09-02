@@ -2,7 +2,8 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		lazy = true,
+		dependencies = { "nvim-lua/plenary.nvim", "ANGkeith/telescope-terraform-doc.nvim" },
 		config = function()
 			require("telescope").setup({
 				pickers = {
@@ -14,6 +15,7 @@ return {
 					},
 				},
 			})
+			require("telescope").load_extension("terraform_doc")
 		end,
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope Find Files" },
@@ -30,6 +32,7 @@ return {
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		lazy = true,
 		keys = {
 			{ "<leader>fE", "<cmd>Telescope file_browser<cr>", desc = "Telescope File Browser" },
 			{
@@ -41,6 +44,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
+		lazy = true,
 		config = function()
 			require("telescope").setup({
 				extensions = {

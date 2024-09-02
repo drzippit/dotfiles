@@ -2,6 +2,7 @@ return {
 	{
 		"echasnovski/mini.ai",
 		version = false,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			require("mini.ai").setup()
 		end,
@@ -9,6 +10,7 @@ return {
 	{
 		"echasnovski/mini.surround",
 		version = false,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			require("mini.surround").setup()
 		end,
@@ -30,6 +32,7 @@ return {
 	{
 		"echasnovski/mini.cursorword",
 		version = false,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			require("mini.cursorword").setup()
 		end,
@@ -37,6 +40,7 @@ return {
 	{
 		"echasnovski/mini.move",
 		version = false,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			require("mini.move").setup()
 		end,
@@ -44,6 +48,7 @@ return {
 	{
 		"echasnovski/mini.pairs",
 		version = false,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			require("mini.pairs").setup()
 		end,
@@ -51,6 +56,7 @@ return {
 	{
 		"echasnovski/mini.files",
 		version = false,
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			require("mini.files").setup()
 		end,
