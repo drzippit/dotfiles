@@ -57,3 +57,6 @@ bindkey '^[[B' history-substring-search-down
 autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|=*' 'l:|=* r:|=*'
+
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
