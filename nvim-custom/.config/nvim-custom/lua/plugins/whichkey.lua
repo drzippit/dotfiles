@@ -4,6 +4,7 @@ return {
 	opts = function()
 		local wk = require("which-key")
 		wk.add({
+			{ "<leader>b", group = "Buffer" }, --TODO: Buffer keybinds
 			{ "<leader>f", group = "Find" },
 			{ "<leader>g", group = "Git" },
 			{ "<leader>c", group = "Code" },
@@ -43,6 +44,7 @@ return {
 				desc = "Open MiniFiles",
 				mode = "n",
 			},
+			{ "<leader>t", group = "Toggle/Terraform" },
 			{
 				"<leader>tt",
 				":Telescope terraform_doc<cr>",
