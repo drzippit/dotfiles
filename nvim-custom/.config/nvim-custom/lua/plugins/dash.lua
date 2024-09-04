@@ -58,7 +58,7 @@ return {
 							icon_hl = "@variable",
 							desc = "Files",
 							group = "Label",
-							action = "Telescope find_files",
+							action = ":Telescope find_files",
 							key = "f",
 						},
 						-- {
@@ -78,6 +78,6 @@ return {
 				},
 			})
 		end,
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+		dependencies = { { "nvim-tree/nvim-web-devicons" }, { "nvim-telescope/telescope.nvim" } },
 	},
 }
