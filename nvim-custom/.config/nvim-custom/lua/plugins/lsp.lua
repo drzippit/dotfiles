@@ -8,7 +8,7 @@ return {
 			lspconfig.tflint.setup({})
 			lspconfig.gopls.setup({})
 			lspconfig.yamlls.setup({})
-			lspconfig.biceplsp.setup({})
+			lspconfig.bicep.setup({})
 			lspconfig.marksman.setup({})
 		end,
 	},
