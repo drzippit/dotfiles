@@ -5,7 +5,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				terraform = { "terraform_fmt" },
-				go = { "gofmt" },
+				go = { "gofmt", "goimports" },
 			},
 		})
 	end,
