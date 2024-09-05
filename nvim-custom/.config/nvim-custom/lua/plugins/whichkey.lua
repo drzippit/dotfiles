@@ -15,6 +15,11 @@ return {
 				mode = { "n", "v" },
 			},
 			{
+				"<leader>cf",
+				desc = "Code Format",
+				mode = { "n", "v" },
+			},
+			{
 				"K",
 				vim.lsp.buf.hover,
 				desc = "Hover Information",

@@ -28,6 +28,7 @@ vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.scrolloff = 10
 
 -- Setup lazy.nvim
 require("lazy").setup({

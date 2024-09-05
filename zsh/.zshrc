@@ -48,6 +48,7 @@ alias tfsh='terraform show'
 alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom
 alias nvc='NVIM_APPNAME=nvim-chad nvim' #NvChad
+alias nm='NVIM_APPNAME=nvim-mini nvim' #NvMini
 
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
@@ -60,3 +61,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|=*' 'l:|=* r:|=*'
 
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
+source <(fzf --zsh)
+
