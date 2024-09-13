@@ -25,13 +25,16 @@ export EDITOR=nvim
 eval "$(zoxide init zsh)"
 
 # Aliases
-alias vim="nvim"
+alias vim="NVIM_APPNAME=nvim-custom nvim"
+alias nvim="NVIM_APPNAME=nvim-custom nvim"
+alias v="NVIM_APPNAME=nvim-custom nvim"
 alias ls="eza --icons=always"
 alias ll="eza --icons=always -la"
 alias cd="z"
 # Terraform
 alias tf='terraform'
 alias tfa='terraform apply'
+alias tfaaa='terraform apply --auto-approve'
 alias tfc='terraform console'
 alias tfd='terraform destroy'
 alias tff='terraform fmt'

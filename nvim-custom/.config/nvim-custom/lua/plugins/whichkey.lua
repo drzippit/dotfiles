@@ -45,7 +45,7 @@ return {
 			},
 			{
 				"<leader>e",
-				":lua MiniFiles.open()<cr>",
+				":NvimTreeToggle<cr>",
 				desc = "Open MiniFiles",
 				mode = "n",
 			},

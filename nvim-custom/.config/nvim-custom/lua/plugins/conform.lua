@@ -6,6 +6,7 @@ return {
 				lua = { "stylua" },
 				terraform = { "terraform_fmt" },
 				go = { "gofmt", "goimports" },
+				jsonc = { "prettier" },
 			},
 		})
 	end,

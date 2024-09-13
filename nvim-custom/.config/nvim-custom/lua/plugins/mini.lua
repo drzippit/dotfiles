@@ -53,12 +53,12 @@ return {
 			require("mini.pairs").setup()
 		end,
 	},
-	{
-		"echasnovski/mini.files",
-		version = false,
-		event = { "BufReadPre", "BufNewFile" },
-		opts = function()
-			require("mini.files").setup()
-		end,
-	},
+	-- {
+	-- 	"echasnovski/mini.files",
+	-- 	version = false,
+	-- 	event = { "BufReadPre", "BufNewFile" },
+	-- 	opts = function()
+	-- 		require("mini.files").setup()
+	-- 	end,
+	-- },
 }
