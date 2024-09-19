@@ -30,6 +30,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.scrolloff = 10
+vim.opt.conceallevel = 0
 
 -- Setup lazy.nvim
 require("lazy").setup({
