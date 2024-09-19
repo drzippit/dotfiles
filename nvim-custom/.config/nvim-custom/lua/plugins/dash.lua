@@ -29,55 +29,62 @@ return {
 	-- 	-- }
 	-- 	alpha.setup(theta.config)
 	-- end,
+	-- {
+	-- 	"nvimdev/dashboard-nvim",
+	-- 	event = "VimEnter",
+	-- 	config = function()
+	-- 		require("dashboard").setup({
+	-- 			theme = "hyper",
+	-- 			config = {
+	-- 				header = {
+	-- 					"          .         .                                           .         .           ",
+	-- 					"         ,8.       ,8. `8.`888b           ,8'  8 8888          ,8.       ,8.          ",
+	-- 					"        ,888.     ,888. `8.`888b         ,8'   8 8888         ,888.     ,888.         ",
+	-- 					"       .`8888.   .`8888. `8.`888b       ,8'    8 8888        .`8888.   .`8888.        ",
+	-- 					"      ,8.`8888. ,8.`8888. `8.`888b     ,8'     8 8888       ,8.`8888. ,8.`8888.       ",
+	-- 					"     ,8'8.`8888,8^8.`8888. `8.`888b   ,8'      8 8888      ,8'8.`8888,8^8.`8888.      ",
+	-- 					"    ,8' `8.`8888' `8.`8888. `8.`888b ,8'       8 8888     ,8' `8.`8888' `8.`8888.     ",
+	-- 					"   ,8'   `8.`88'   `8.`8888. `8.`888b8'        8 8888    ,8'   `8.`88'   `8.`8888.    ",
+	-- 					"  ,8'     `8.`'     `8.`8888. `8.`888'         8 8888   ,8'     `8.`'     `8.`8888.   ",
+	-- 					" ,8'       `8        `8.`8888. `8.`8'          8 8888  ,8'       `8        `8.`8888.  ",
+	-- 					",8'         `         `8.`8888. `8.`           8 8888 ,8'         `         `8.`8888. ",
+	-- 					"",
+	-- 					"",
+	-- 				},
+	-- 				shortcut = {
+	-- 					{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
+	-- 					{
+	-- 						icon = " ",
+	-- 						icon_hl = "@variable",
+	-- 						desc = "Files",
+	-- 						group = "Label",
+	-- 						action = ":Telescope find_files",
+	-- 						key = "f",
+	-- 					},
+	-- 					-- {
+	-- 					-- 	desc = " Apps",
+	-- 					-- 	group = "DiagnosticHint",
+	-- 					-- 	action = "Telescope app",
+	-- 					-- 	key = "a",
+	-- 					-- },
+	-- 					-- {
+	-- 					-- 	desc = " dotfiles",
+	-- 					-- 	group = "Number",
+	-- 					-- 	action = "Telescope dotfiles",
+	-- 					-- 	key = "d",
+	-- 					-- },
+	-- 				},
+	-- 				footer = {},
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- 	dependencies = { { "nvim-tree/nvim-web-devicons" }, { "nvim-telescope/telescope.nvim" } },
+	-- },
 	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require("dashboard").setup({
-				theme = "hyper",
-				config = {
-					header = {
-						"          .         .                                           .         .           ",
-						"         ,8.       ,8. `8.`888b           ,8'  8 8888          ,8.       ,8.          ",
-						"        ,888.     ,888. `8.`888b         ,8'   8 8888         ,888.     ,888.         ",
-						"       .`8888.   .`8888. `8.`888b       ,8'    8 8888        .`8888.   .`8888.        ",
-						"      ,8.`8888. ,8.`8888. `8.`888b     ,8'     8 8888       ,8.`8888. ,8.`8888.       ",
-						"     ,8'8.`8888,8^8.`8888. `8.`888b   ,8'      8 8888      ,8'8.`8888,8^8.`8888.      ",
-						"    ,8' `8.`8888' `8.`8888. `8.`888b ,8'       8 8888     ,8' `8.`8888' `8.`8888.     ",
-						"   ,8'   `8.`88'   `8.`8888. `8.`888b8'        8 8888    ,8'   `8.`88'   `8.`8888.    ",
-						"  ,8'     `8.`'     `8.`8888. `8.`888'         8 8888   ,8'     `8.`'     `8.`8888.   ",
-						" ,8'       `8        `8.`8888. `8.`8'          8 8888  ,8'       `8        `8.`8888.  ",
-						",8'         `         `8.`8888. `8.`           8 8888 ,8'         `         `8.`8888. ",
-						"",
-						"",
-					},
-					shortcut = {
-						{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
-						{
-							icon = " ",
-							icon_hl = "@variable",
-							desc = "Files",
-							group = "Label",
-							action = ":Telescope find_files",
-							key = "f",
-						},
-						-- {
-						-- 	desc = " Apps",
-						-- 	group = "DiagnosticHint",
-						-- 	action = "Telescope app",
-						-- 	key = "a",
-						-- },
-						-- {
-						-- 	desc = " dotfiles",
-						-- 	group = "Number",
-						-- 	action = "Telescope dotfiles",
-						-- 	key = "d",
-						-- },
-					},
-					footer = {},
-				},
-			})
+		"echasnovski/mini.starter",
+		version = false,
+		opts = function()
+			require("mini.starter").setup()
 		end,
-		dependencies = { { "nvim-tree/nvim-web-devicons" }, { "nvim-telescope/telescope.nvim" } },
 	},
 }
