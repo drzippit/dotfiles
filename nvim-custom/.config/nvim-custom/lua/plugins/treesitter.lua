@@ -11,12 +11,15 @@ return {
 				indent = { enable = true },
 			})
 		end,
-		dependencies = { "nvim-treesitter/nvim-treesitter-context" },
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-context",
+			"hiphish/rainbow-delimiters.nvim",
+		},
 	},
 	{
 		"Wansmer/treesj",
 		keys = { "<space>m", "<space>j", "<space>s" },
-		lazy = true,
+		lazy = false,
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("treesj").setup({})

@@ -61,4 +61,12 @@ return {
 	-- 		require("mini.files").setup()
 	-- 	end,
 	-- },
+	-- {
+	-- 	"echasnovski/mini.indentscope",
+	-- 	version = false,
+	-- 	event = { "BufReadPre", "BufNewFile" },
+	-- 	opts = function()
+	-- 		require("mini.indentscope").setup()
+	-- 	end,
+	-- },
 }
