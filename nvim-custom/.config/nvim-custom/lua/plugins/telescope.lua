@@ -2,7 +2,7 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
-		lazy = true,
+		lazy = false,
 		dependencies = { "nvim-lua/plenary.nvim", "ANGkeith/telescope-terraform-doc.nvim" },
 		config = function()
 			require("telescope").setup({
