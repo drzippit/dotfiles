@@ -20,17 +20,21 @@ export CDPATH=~/.config/nvim-custom/
 # Set nvim as editor
 export EDITOR=nvim
 
-# Load shell integration
-#source <(fzf --zsh)
-eval "$(zoxide init zsh)"
-
 # Aliases
-alias vim="NVIM_APPNAME=nvim-custom nvim"
-alias nvim="NVIM_APPNAME=nvim-custom nvim"
-alias v="NVIM_APPNAME=nvim-custom nvim"
-alias ls="eza --icons=always"
-alias ll="eza --icons=always -la"
-alias cd="z"
+if command -v eza &>/dev/null; then
+  alias ls="eza --icons=always"
+  alias ll="eza --icons=always -la"
+  alias lla='eza -alhg'
+  alias tree='eza --tree'
+fi
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+
+  alias cd='z'
+  # Alias below is same as 'cd -', takes to the previous directory
+  alias cdd='z -'
+fi
+
 # Terraform
 alias tf='terraform'
 alias tfa='terraform apply'
@@ -48,6 +52,9 @@ alias tft='terraform test'
 alias tfsh='terraform show'
 
 # ViM Distro's
+alias vim="NVIM_APPNAME=nvim-custom nvim"
+alias nvim="NVIM_APPNAME=nvim-custom nvim"
+alias v="NVIM_APPNAME=nvim-custom nvim"
 alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom
 alias nvc='NVIM_APPNAME=nvim-chad nvim' #NvChad
@@ -62,7 +69,11 @@ autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|=*' 'l:|=* r:|=*'
 
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
-source <(fzf --zsh)
+if command -v fuck &>/dev/null; then
+  eval $(thefuck --alias)
+  eval $(thefuck --alias fk)
+fi
 
+if command -v fzf &>/dev/null; then
+  source <(fzf --zsh)
+fi
