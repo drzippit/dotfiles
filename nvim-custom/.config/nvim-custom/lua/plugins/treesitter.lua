@@ -39,6 +39,8 @@ return {
 							["if"] = "@function.inner",
 							["ac"] = "@class.outer",
 							["ic"] = "@class.inner",
+							["ib"] = "@block.inner",
+							["ab"] = "@block.outer",
 						},
 					},
 				},
