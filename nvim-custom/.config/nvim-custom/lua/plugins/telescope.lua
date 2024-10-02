@@ -22,6 +22,7 @@ return {
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope live grep" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope Buffers" },
 			{ "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Telescope Old Files" },
+			{ "<leader>fC", "<cmd>Telescope colorscheme<cr>", desc = "Telescope Colorschemes" },
 			{ "<leader> ", "<cmd>Telescope buffers<cr>", desc = "Telescope Buffers" },
 			{
 				"<leader>fc",
