@@ -225,3 +225,7 @@ fi
 if command -v fzf &>/dev/null; then
   source <(fzf --zsh)
 fi
+
+if command -v k9s &>/dev/null; then
+  source <(k9s completion zsh)
+fi
