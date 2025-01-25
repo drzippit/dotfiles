@@ -93,8 +93,14 @@ return {
 			},
 			{
 				"<leader>tm",
-				":RenderMarkdown toggle<cr>",
+				":Markview Toggle<cr>",
 				desc = "Toggle Markdown rendering",
+				mode = "n",
+			},
+			{
+				"<leader>tM",
+				":Markview splitToggle<cr>",
+				desc = "Toggle Markdown splitview",
 				mode = "n",
 			},
 			{ "<leader>j", group = "Jump" },
