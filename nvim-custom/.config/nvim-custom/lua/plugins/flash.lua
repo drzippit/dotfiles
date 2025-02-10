@@ -5,5 +5,10 @@ return {
 		jump = {
 			autojump = true,
 		},
+		modes = {
+			char = {
+				jump_labels = true,
+			},
+		},
 	},
 }

@@ -22,13 +22,6 @@ return {
 			require("mini.animate").setup()
 		end,
 	},
-	-- {
-	-- 	"echasnovski/mini.trailspace",
-	-- 	version = false,
-	-- 	opts = function()
-	-- 		require("mini.trailspace").setup()
-	-- 	end,
-	-- },
 	{
 		"echasnovski/mini.cursorword",
 		version = false,
@@ -53,20 +46,4 @@ return {
 			require("mini.pairs").setup()
 		end,
 	},
-	-- {
-	-- 	"echasnovski/mini.files",
-	-- 	version = false,
-	-- 	event = { "BufReadPre", "BufNewFile" },
-	-- 	opts = function()
-	-- 		require("mini.files").setup()
-	-- 	end,
-	-- },
-	-- {
-	-- 	"echasnovski/mini.indentscope",
-	-- 	version = false,
-	-- 	event = { "BufReadPre", "BufNewFile" },
-	-- 	opts = function()
-	-- 		require("mini.indentscope").setup()
-	-- 	end,
-	-- },
 }

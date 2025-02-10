@@ -16,15 +16,15 @@ return {
 			"hiphish/rainbow-delimiters.nvim",
 		},
 	},
-	{
-		"Wansmer/treesj",
-		keys = { "<space>m", "<space>j", "<space>s" },
-		lazy = false,
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		config = function()
-			require("treesj").setup({})
-		end,
-	},
+	-- {
+	-- 	"Wansmer/treesj",
+	-- 	keys = { "<space>m", "<space>j", "<space>s" },
+	-- 	lazy = false,
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	-- 	config = function()
+	-- 		require("treesj").setup({})
+	-- 	end,
+	-- },
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		lazy = true,
