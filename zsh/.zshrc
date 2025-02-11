@@ -200,12 +200,8 @@ alias klf1m='kubectl logs --since 1m -f'
 alias klf1s='kubectl logs --since 1s -f'
 
 # ViM Distro's
-alias vim="nvim"
-alias v="NVIM_APPNAME=nvim-custom nvim"
-alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias vim="nvim" # Default nvim, based on lazy-git
 alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom
-alias nvc='NVIM_APPNAME=nvim-chad nvim' #NvChad
-alias nm='NVIM_APPNAME=nvim-mini nvim' #NvMini
 
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
