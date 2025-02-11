@@ -200,8 +200,7 @@ alias klf1m='kubectl logs --since 1m -f'
 alias klf1s='kubectl logs --since 1s -f'
 
 # ViM Distro's
-alias vim="NVIM_APPNAME=nvim-custom nvim"
-alias nvim="NVIM_APPNAME=nvim-custom nvim"
+alias vim="nvim"
 alias v="NVIM_APPNAME=nvim-custom nvim"
 alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom
