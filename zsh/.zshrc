@@ -35,6 +35,9 @@ if command -v zoxide &>/dev/null; then
   alias cdd='z -'
 fi
 
+# File Manager
+alias fm='yazi'
+
 # Terraform
 alias tf='terraform'
 alias tfa='terraform apply'
