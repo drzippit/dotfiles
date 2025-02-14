@@ -35,9 +35,8 @@ if command -v zoxide &>/dev/null; then
   alias cdd='z -'
 fi
 
-# File Manager
+# --- File Manager ---
 alias fm='yazi'
-alias yazi='y'
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -47,7 +46,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Terraform
+# --- Terraform ---
 alias tf='terraform'
 alias tfa='terraform apply'
 alias tfaaa='terraform apply --auto-approve'
@@ -63,7 +62,7 @@ alias tfs='terraform state'
 alias tft='terraform test'
 alias tfsh='terraform show'
 
-#Kubernetes
+# --- Kubernetes ---
 # This command is used a LOT both below and in daily life
 alias k=kubectl
 # Apply a YML file
@@ -211,9 +210,11 @@ alias klf1h='kubectl logs --since 1h -f'
 alias klf1m='kubectl logs --since 1m -f'
 alias klf1s='kubectl logs --since 1s -f'
 
+# --- Kubernetes end ---
+
 # ViM Distro's
-alias vim="nvim" # Default nvim, based on lazy-git
-alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom
+alias vim="nvim" # Default nvim, based on lazy-vim
+alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom which is more bloated but does the same as lazy-vim
 
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
