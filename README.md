@@ -2,15 +2,15 @@
 
 ## Clone
 
-git clone --recurse-submodules https://github.com/drzippit/dotfiles.git
+git clone --recurse-submodules <https://github.com/drzippit/dotfiles.git>
 
 ## Install Stow
 
-https://www.gnu.org/software/stow/
+<https://www.gnu.org/software/stow/>
 
 ## Install Z
 
-https://github.com/ajeetdsouza/zoxide
+<https://github.com/ajeetdsouza/zoxide>
 
    <details>
    <summary>Linux / WSL</summary>
@@ -141,7 +141,7 @@ https://github.com/ajeetdsouza/zoxide
 
 ## Install Eza
 
-https://github.com/eza-community/eza
+<https://github.com/eza-community/eza>
 
    <details>
    <summary>Linux / WSL</summary>
@@ -172,7 +172,7 @@ https://github.com/eza-community/eza
 
 ## Install NeoVim
 
-https://neovim.io/
+<https://neovim.io/>
 
    <details>
    <summary>Linux / WSL</summary>
@@ -199,7 +199,7 @@ https://neovim.io/
 
 ## Install Aerospace
 
-https://github.com/nikitabobko/AeroSpace
+<https://github.com/nikitabobko/AeroSpace>
 
    <details>
    <summary>macOS</summary>
@@ -212,10 +212,10 @@ https://github.com/nikitabobko/AeroSpace
 
 ## Install WezTerm
 
-https://github.com/wez/wezterm
-https://wezfurlong.org/wezterm/installation
+<https://github.com/wez/wezterm>
+<https://wezfurlong.org/wezterm/installation>
 
 # Extra Info
 
 * Font: [Comic Code](https://tosche.net/fonts/comic-code)
-* Color Scheme: [ Cattpuchine Macchiato ](https://github.com/catppuccin/catppuccin)
+* Color Scheme: [Cattpuchine Macchiato](https://github.com/catppuccin/catppuccin)
