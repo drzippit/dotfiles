@@ -7,10 +7,10 @@ return {
     end)
   end,
   keys = {
-    { "<leader>ott", "<cmd>Telescope terraform_doc<cr>", desc = "Telescope Terraform Docs" },
-    { "<leader>otm", "<cmd>Telescope terraform_doc modules<cr>", desc = "Telescope Terraform Modules" },
+    { "<leader>tt", "<cmd>Telescope terraform_doc<cr>", desc = "Telescope Terraform Docs" },
+    { "<leader>tm", "<cmd>Telescope terraform_doc modules<cr>", desc = "Telescope Terraform Modules" },
     {
-      "<leader>ota",
+      "<leader>ta",
       "<cmd>Telescope terraform_doc full_name=hashicorp/azurerm<cr>",
       desc = "Telescope Terraform Docs Azurerm",
     },
