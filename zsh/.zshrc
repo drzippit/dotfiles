@@ -246,3 +246,9 @@ if command -v k9s &>/dev/null; then
 fi
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+source <(switcher init zsh)
+source <(alias s=switch)
+source <(switch completion zsh)
+source <(switcher init zsh)
+source <(alias s=switch)
+source <(switch completion zsh)
