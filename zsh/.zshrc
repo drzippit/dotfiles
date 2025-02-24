@@ -225,6 +225,13 @@ autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|=*' 'l:|=* r:|=*'
 
+eval "$(direnv hook zsh)"
+
+# Switcher (for managing multiple versions of kubeconfigs)
+echo 'source <(switcher init zsh)' >> ~/.zshrc
+echo 'source <(alias s=switch)' >> ~/.zshrc
+echo 'source <(switch completion zsh)' >> ~/.zshrc
+
 if command -v fuck &>/dev/null; then
   eval $(thefuck --alias)
   eval $(thefuck --alias fk)
@@ -237,3 +244,5 @@ fi
 if command -v k9s &>/dev/null; then
   source <(k9s completion zsh)
 fi
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
