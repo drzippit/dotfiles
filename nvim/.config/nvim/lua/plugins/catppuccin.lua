@@ -1,10 +1,12 @@
 return {
+  -- force lazyvim to use catppuccin-mocha
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-mocha",
     },
   },
+  -- Disable tokyonight
   {
     "folke/tokyonight.nvim",
     enabled = false,
