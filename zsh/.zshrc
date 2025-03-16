@@ -212,6 +212,11 @@ alias klf1s='kubectl logs --since 1s -f'
 
 # --- Kubernetes end ---
 
+#  Brew declerative
+alias bbic="brew update &&\
+    brew bundle install --cleanup --file=~/dotfiles/Brewfile &&\
+    brew upgrade"
+
 # ViM Distro's
 alias vim="nvim" # Default nvim, based on lazy-vim
 alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom which is more bloated but does the same as lazy-vim
