@@ -17,17 +17,14 @@ return {
     name = "rose-pine",
     version = false,
     lazy = false,
-    priority = 998,
+    priority = 100,
     config = function()
       require("rose-pine").setup({
-        variant = "main", -- auto, main, moon, or dawn
-        dark_variant = "main", -- main, moon, or dawn
-
         styles = {
           transparency = true,
         },
-        vim.cmd.colorscheme("rose-pine-main"),
       })
+      vim.cmd.colorscheme("rose-pine")
     end,
   },
   -- install everforest
@@ -47,7 +44,7 @@ return {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
-    priority = 1000,
+    priority = 998,
     config = function()
       require("catppuccin").setup({
         transparent_background = true,

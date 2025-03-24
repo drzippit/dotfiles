@@ -15,7 +15,6 @@ antidote load ${ZDOTDIR:-$HOME}/.config/zsh/zsh_plugins.txt
 # Update path
 export GOPATH=$HOME/go
 export PATH=$PATH:~/.local/bin:/opt/nvim-linux64/bin:$GOPATH:$GOPATH/bin
-export CDPATH=~/.config/nvim-custom/
 
 # Set nvim as editor
 export EDITOR=nvim
@@ -219,7 +218,6 @@ alias bbic="brew update &&\
 
 # ViM Distro's
 alias vim="nvim" # Default nvim, based on lazy-vim
-alias vc='NVIM_APPNAME=nvim-custom nvim' # Custom which is more bloated but does the same as lazy-vim
 
 # Bind up and down keys to partially search in history
 bindkey '^[[A' history-substring-search-up
