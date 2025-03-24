@@ -214,7 +214,7 @@ alias klf1s='kubectl logs --since 1s -f'
 #  Brew declerative
 alias bbic="brew update &&\
     brew bundle install --cleanup --file=~/dotfiles/Brewfile &&\
-    brew upgrade"
+    brew upgrade --greedy"
 
 # ViM Distro's
 alias vim="nvim" # Default nvim, based on lazy-vim
