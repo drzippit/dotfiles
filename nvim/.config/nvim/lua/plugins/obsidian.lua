@@ -1,5 +1,5 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*",
   keys = {
     { "<leader>os", ":ObsidianQuickSwitch<cr>", desc = "Obsidian Quick Switch" },

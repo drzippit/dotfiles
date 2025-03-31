@@ -1,14 +1,17 @@
 [default_session]
-startup_command = "nvim -c ':Telescope find_files'"
+startup_command = "nvim -c ':lua Snacks.picker.files()'"
 [[session]]
-name = "Downloads 📥"
-path = "~/Downloads"
+name = "Notes 📝"
+path = "~/Documents/notes/"
 [[session]]
 name = "dotfiles 📂"
 path = "~/dotfiles"
 [[session]]
 name = "spoorweb 🚂"
 path = "~/Documents/prorail/Spoorweb/"
+[[session]]
+name = "spoorweb-menno 🚂"
+path = "~/Documents/prorail/menno/"
 [[session]]
 name = "Olympic"
 path = "~"
