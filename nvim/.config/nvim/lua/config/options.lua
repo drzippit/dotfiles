@@ -6,3 +6,7 @@ local opt = vim.opt
 
 opt.scrolloff = 10
 opt.conceallevel = 1 -- Hide * markup for bold and italic, but not markers with substitutions
+
+vim.diagnostic.config({
+  virtual_lines = { current_line = true },
+})
