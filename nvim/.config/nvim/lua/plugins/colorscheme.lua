@@ -3,7 +3,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      -- colorscheme = "catppuccin-mocha",
+      colorscheme = "sonokai",
     },
   },
   -- Disable tokyonight
@@ -16,8 +17,9 @@ return {
     "rose-pine/neovim",
     name = "rose-pine",
     version = false,
+    enabled = false,
     lazy = false,
-    priority = 100,
+    priority = 1000,
     config = function()
       require("rose-pine").setup({
         styles = {
@@ -31,6 +33,7 @@ return {
   {
     "neanias/everforest-nvim",
     version = false,
+    enabled = false,
     lazy = false,
     priority = 999,
     config = function()
@@ -44,6 +47,7 @@ return {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
+    enabled = false,
     priority = 998,
     config = function()
       require("catppuccin").setup({
@@ -53,6 +57,18 @@ return {
         },
       })
       vim.cmd.colorscheme("catppuccin-mocha")
+    end,
+  },
+  {
+    "sainnhe/sonokai",
+    lazy = false,
+    priority = 100,
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.sonokai_transparent_background = 2
+      vim.g.sonokai_enable_italic = true
+      vim.cmd.colorscheme("sonokai")
     end,
   },
 }
