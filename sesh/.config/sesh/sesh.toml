@@ -10,3 +10,6 @@ path = "~/dotfiles"
 name = "Olympic"
 path = "~"
 startup_command = "~/.config/sesh/scripts/olympic"
+[[session]]
+name = "Algemene Zaken"
+path = "~/Documents/az/"
