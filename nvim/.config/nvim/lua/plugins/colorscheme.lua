@@ -4,7 +4,8 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "catppuccin-mocha",
-      colorscheme = "sonokai",
+      -- colorscheme = "sonokai",
+      colorscheme = "rose-pine",
     },
   },
   -- Disable tokyonight
@@ -17,7 +18,7 @@ return {
     "rose-pine/neovim",
     name = "rose-pine",
     version = false,
-    enabled = false,
+    enabled = true,
     lazy = false,
     priority = 1000,
     config = function()
@@ -62,6 +63,7 @@ return {
   {
     "sainnhe/sonokai",
     lazy = false,
+    enabled = false,
     priority = 100,
     config = function()
       -- Optionally configure and load the colorscheme
