@@ -1,72 +1,38 @@
 return {
   "obsidian-nvim/obsidian.nvim",
-  version = "*",
-  keys = {
-    { "<leader>os", ":ObsidianQuickSwitch<cr>", desc = "Obsidian Quick Switch" },
-    { "<leader>ot", ":ObsidianToday<cr>", desc = "Obsidian today" },
-    { "<leader>oT", ":ObsidianTomorrow<cr>", desc = "Obsidian tomorrow" },
-    { "<leader>oy", ":ObsidianYesterday<cr>", desc = "Obsidian yesterday" },
-    { "<leader>on", ":ObsidianNew ", desc = "Obsidian new" },
-    { "<leader>ow", ":ObsidianWorkspace<cr>", desc = "Obsidian workspace" },
-    { "<leader>oo", ":ObsidianOpen<cr>", desc = "Obsidian open" },
-  },
-  lazy = true,
+  version = "*", -- recommended, use latest release instead of latest commit
   ft = "markdown",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-  },
+  -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
+  -- event = {
+  --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+  --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
+  --   -- refer to `:h file-pattern` for more examples
+  --   "BufReadPre path/to/my-vault/*.md",
+  --   "BufNewFile path/to/my-vault/*.md",
+  -- },
+  ---@module 'obsidian'
+  ---@type obsidian.config
   opts = {
     workspaces = {
       {
         name = "personal",
-        path = "~/Documents/notes/personal",
+        path = "~/obsidian/personal",
       },
       {
         name = "work",
-        path = "~/Documents/notes/work",
+        path = "~/obsidian/work",
       },
     },
-    notes_subdir = "inbox",
-    new_notes_location = "notes_subdir",
     daily_notes = {
-      folder = "dailies",
-      date_format = "%Y-%m-%d",
-      alias_format = "%B %-d, %Y",
-      default_tags = { "daily-notes" },
-      template = nil,
+      folder = "dailies/",
+      date_format = "%Y/%Y-%m-%d-%A",
     },
-    -- Optional, customize how note IDs are generated given an optional title.
-    ---@param title string|?
-    ---@return string
-    note_id_func = function(title)
-      local current_datetime = os.date("!%d-%m-%Y", os.time() - 0 * 3600)
-      local suffix = ""
-      if title ~= nil then
-        -- If title is given, transform it into valid file name.
-        suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
-      else
-        -- If title is nil, just add 4 random uppercase letters to the suffix.
-        for _ = 1, 4 do
-          suffix = suffix .. string.char(math.random(65, 90))
-        end
-      end
-      return current_datetime .. "-" .. suffix
-    end,
-
-    -- Optional, customize how note file names are generated given the ID, target directory, and title.
-    ---@param spec { id: string, dir: obsidian.Path, title: string|? }
-    ---@return string|obsidian.Path The full path to the new note.
-    note_path_func = function(spec)
-      -- This is equivalent to the default behavior.
-      local path = spec.dir / (spec.id .. "_" .. tostring(spec.title))
-      return path:with_suffix(".md")
-    end,
-    -- -- Change the behavior to create the file with the title and not a random string
-    -- ---@param spec { id: string, dir: obsidian.Path, title: string|? }
-    -- ---@return string|obsidian.Path The full path to the new note.
-    -- note_path_func = function(spec)
-    --   local path = spec.dir / tostring(spec.title)
-    --   return path:with_suffix(".md")
-    -- end,
+    new_notes_location = "current_dir",
+    completion = {
+      nvim_cmp = false,
+      blink = true,
+      min_chars = 2,
+      match_case = false,
+    },
   },
 }
