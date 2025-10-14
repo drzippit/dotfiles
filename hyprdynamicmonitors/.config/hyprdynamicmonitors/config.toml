@@ -25,29 +25,40 @@ timeout_ms = 5000 # Notification display duration in milliseconds (default: 1000
 # Higher scores win - adjust these values to prioritize different matching criteria
 name_match = 10       # Points awarded for exact monitor name match (e.g., "eDP-1")
 description_match = 5 # Points awarded for exact monitor description match
-power_state_match = 3 # Bonus points for matching power state requirements
-
-[fallback_profile]
-config_file = "hyprconfigs/fallback.conf"
-config_file_type = "static"
+# power_state_match = 3 # Bonus points for matching power state requirements
 
 [profiles.laptop_only]
 config_file = "hyprconfigs/laptop-only.conf"
-config_file_type = "static"                  # Creates a symlink to the config file
+config_file_type = "static"
 
-# Conditions define when this profile should be used
-[profiles.laptop_only.conditions]
-# No power_state requirement - works on both AC and battery
-
-# All monitors in required_monitors must be connected for profile to match
 [[profiles.laptop_only.conditions.required_monitors]]
-name = "eDP-1" # Match by exact monitor name
+name = "eDP-1"
+description = "BOE NE135A1M-NY1"
 
 # Profile: External Monitor Only
 [profiles.external_only]
 config_file = "hyprconfigs/external-only.conf"
 config_file_type = "static"
 
+[[profiles.external_only.conditions]]
+lid_state = "Closed"
+
 [[profiles.external_only.conditions.required_monitors]]
+name = "DP-2"
+description = "Philips Consumer Electronics Company PHL 346B1C 0x00002FE5"
+
+# Profile: External Moninitor and laptop monitor
+[profiles.external_and_laptop]
+config_file = "hyprconfigs/external-and-laptop.conf"
+config_file_type = "static"
+
+[[profiles.external_and_laptop.conditions]]
+lid_state = "Opened"
+
+[[profiles.external_and_laptop.conditions.required_monitors]]
+name = "eDP-1"
+description = "BOE NE135A1M-NY1"
+
+[[profiles.external_and_laptop.conditions.required_monitors]]
 name = "DP-2"
 description = "Philips Consumer Electronics Company PHL 346B1C 0x00002FE5"
