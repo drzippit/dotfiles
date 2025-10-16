@@ -40,7 +40,7 @@ description = "BOE NE135A1M-NY1"
 config_file = "hyprconfigs/external-only.conf"
 config_file_type = "static"
 
-[[profiles.external_only.conditions]]
+[profiles.external_only.conditions]
 lid_state = "Closed"
 
 [[profiles.external_only.conditions.required_monitors]]
@@ -52,7 +52,7 @@ description = "Philips Consumer Electronics Company PHL 346B1C 0x00002FE5"
 config_file = "hyprconfigs/external-and-laptop.conf"
 config_file_type = "static"
 
-[[profiles.external_and_laptop.conditions]]
+[profiles.external_and_laptop.conditions]
 lid_state = "Opened"
 
 [[profiles.external_and_laptop.conditions.required_monitors]]
