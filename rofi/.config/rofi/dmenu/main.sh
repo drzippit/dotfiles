@@ -1,18 +1,29 @@
 #!/usr/bin/env bash
+
 MODULE_DIR="$HOME/.config/rofi/dmenu/modules/"
 
 while true; do
-    modules=$(find "$MODULE_DIR" -type f -name "*.sh" -exec basename {} .sh \; | sort)
-    chosen=$(echo "$modules" | rofi -dmenu -p "Modules")
+    # Collect module files (strip .sh) and directories (as submodules)
+    modules=$(
+        find "$MODULE_DIR" -mindepth 1 -maxdepth 1 \( -type f -name "*.sh" -printf "%f\n" -o -type d -printf "%f\n" \) |
+        sed 's/\.sh$//' |
+        sort
+    )
 
-    # If user cancels, exit the whole system
+    chosen=$(echo "$modules" | rofi -dmenu -p "Modules" -show-icons)
+
     [ -z "$chosen" ] && exit
 
-    # Run chosen module
-    "$MODULE_DIR/$chosen.sh"
-    code=$?
+    if [ -f "$MODULE_DIR/$chosen.sh" ]; then
+        "$MODULE_DIR/$chosen.sh"
+        code=$?
+    elif [ -d "$MODULE_DIR/$chosen" ]; then
+        "$MODULE_DIR/$chosen/$chosen.sh"
+        code=$?
+    else
+        continue
+    fi
 
-    # If module exits with 10, stop everything
     [ "$code" -eq 10 ] && exit
 done
 
