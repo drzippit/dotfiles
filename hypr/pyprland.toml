@@ -1,0 +1,46 @@
+[pyprland]
+plugins = ["shortcuts_menu", "fetch_client_menu", "scratchpads"]
+
+[shortcuts_menu.entries]
+"Fetch window" = "pypr fetch_client_menu"
+"monitor menu" = [
+  { name = "Which layout?", options = [
+    "laptop",
+    "docked",
+    "external",
+  ] },
+  "hyprmon -profile [Which layout?]",
+]
+screenshot = [
+  { name = "what", options = [
+    "output",
+    "window",
+    "region",
+    "active",
+  ] },
+  "hyprshot -m [what] -o /tmp -f shot_[what].png",
+]
+annotate = [
+  { name = "fname", command = "ls /tmp/shot_*.png" },
+  "satty --filename '[fname]' --output-filename '/tmp/annotated.png'",
+]
+"Clipboard history" = [
+  { name = "entry", command = "cliphist list", filter = "s/\t.*//" },
+  "cliphist decode '[entry]' | wl-copy",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm -e btop"
+class = "kitty-dropterm"
+size = "75% 60%"
+max_size = "1920px 100%"
+margin = 50
+
+[scratchpads.ferdium]
+animation = "fromBottom"
+command = "ferdium"
+class = "ferdium"
+size = "75% 90%"
+max_size = "1920px 100%"
+margin = 50
