@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Firefox (Personal)
+Exec=/usr/bin/firefox -P personal -no-remote
+Icon=firefox
+Type=Application
+Categories=Network;WebBrowser;
+StartupNotify=true
