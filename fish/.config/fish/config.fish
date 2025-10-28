@@ -89,6 +89,8 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 #init starship
 starship init fish | source
 
+fish_add_path -m ~/.local/bin
+
 # overwrite greeting
 # potentially disabling fastfetch
 #function fish_greeting
