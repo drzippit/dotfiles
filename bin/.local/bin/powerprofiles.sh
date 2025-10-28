@@ -26,7 +26,7 @@ for i in "${!options[@]}"; do
 done
 
 # Show menu with Walker
-choice=$(printf "%s\n" "${options[@]}" | walker -d -p "Choose a Power Profile:")
+choice=$(printf "%s\n" "${options[@]}" | walker -d -p "Choose a Power Profile")
 
 # Handle selection
 case "$choice" in
