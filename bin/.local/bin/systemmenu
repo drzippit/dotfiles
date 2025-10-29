@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Define options
+options=(
+    "Suspend"
+    "Reboot"
+    "Power off"
+)
+
+# Show menu with Walker
+choice=$(printf "%s\n" "${options[@]}" | walker -d -p "What do you want to do?")
+
+# Handle selection
+case "$choice" in
+  *Suspend*)
+    systemctl suspend
+    ;;
+  *Reboot*)
+    reboot
+    ;;
+  *Power*)
+    poweroff
+    ;;
+  *)
+    echo "No valid choice."
+    exit 1
+    ;;
+esac
+

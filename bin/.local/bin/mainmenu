@@ -5,6 +5,7 @@ options=(
     "Fan Profiles"
     "Power Profiles"
     "Screenshots"
+    "System menu"
 )
 
 # Show menu with Walker
@@ -13,13 +14,16 @@ choice=$(printf "%s\n" "${options[@]}" | walker -d -p "Which menu?")
 # Handle selection
 case "$choice" in
   *Fan*)
-    $HOME/.local/bin/fanprofiles.sh
+    $HOME/.local/bin/fanprofiles
     ;;
   *Power*)
-    $HOME/.local/bin/powerprofiles.sh
+    $HOME/.local/bin/powerprofiles
     ;;
   *Screenshots*)
-    $HOME/.local/bin/screenshotdmenu.sh
+    $HOME/.local/bin/screenshotdmenu
+    ;;
+  *System*)
+    $HOME/.local/bin/systemmenu
     ;;
   *)
     echo "No valid choice."
