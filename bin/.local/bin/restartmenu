@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Define options
+options=(
+    "waybar"
+    "Walker and Elephant"
+)
+
+# Show menu with Walker
+choice=$(printf "%s\n" "${options[@]}" | walker -d -p "What do you want to restart?")
+
+# Handle selection
+case "$choice" in
+  *waybar*)
+    restart_waybar
+    ;;
+  *walker*)
+    restart_walker
+    ;;
+  *)
+    echo "No valid choice."
+    exit 1
+    ;;
+esac
+
