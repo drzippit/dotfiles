@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# Terminate already running elephant/walker instances
+killall -q elephant
+killall -q walker
+
+# Wait until the processes have been shut down
+while pgrep -x elephant >/dev/null; do sleep 1; done
+
+# Launch elephant and walker
+elephant &
+walker --gapplication-service &
+notify-send "Elephant and Walker restarted"
