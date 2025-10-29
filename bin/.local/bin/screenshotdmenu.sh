@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Hyprland screenshot script using grim, slurp, and satty
-# Menu via walker -d
-
 # Define options
 options=(
     "Screen"

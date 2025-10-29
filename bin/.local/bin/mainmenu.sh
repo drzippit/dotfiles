@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Hyprland screenshot script using grim, slurp, and satty
-# Menu via walker -d
-
 # Define options
 options=(
     "Fan Profiles"
@@ -11,7 +8,7 @@ options=(
 )
 
 # Show menu with Walker
-choice=$(printf "%s\n" "${options[@]}" | walker -d -p "What menu")
+choice=$(printf "%s\n" "${options[@]}" | walker -d -p "Which menu?")
 
 # Handle selection
 case "$choice" in
