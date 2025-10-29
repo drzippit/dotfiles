@@ -35,7 +35,3 @@ esac
 
 # Open screenshot in Satty for annotation
 satty --filename "$tmpfile" --copy-command "wl-copy < {}"
-
-# Clean up
-rm -f "$tmpfile"
-
