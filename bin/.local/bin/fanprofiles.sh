@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Get current power profile
-current_profile=$(powerprofilesctl get)
-
 # Define options
 options=(
   "Laziest"
