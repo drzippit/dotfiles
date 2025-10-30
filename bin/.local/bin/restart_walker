@@ -8,6 +8,6 @@ killall -q walker
 while pgrep -x elephant >/dev/null; do sleep 1; done
 
 # Launch elephant and walker
-elephant &
+systemctl --user start elephant
 walker --gapplication-service &
 notify-send "Elephant and Walker restarted"
