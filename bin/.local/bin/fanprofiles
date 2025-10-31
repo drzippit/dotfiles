@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Get current profile (extract between quotes)
+current_profile=$(fw-fanctrl print | grep -oP "(?<=Strategy: ')[^']+")
+
 # Define options
 options=(
   "Laziest"
@@ -11,8 +14,19 @@ options=(
   "Aeolus"
 )
 
+# Append an asterisk to the current one
+menu_options=()
+for opt in "${options[@]}"; do
+  # normalize both to lowercase for comparison
+  if [[ "${opt,,}" == "$current_profile" ]]; then
+    menu_options+=("${opt} *")
+  else
+    menu_options+=("$opt")
+  fi
+done
+
 # Show menu with Walker
-choice=$(printf "%s\n" "${options[@]}" | walker -d -p "Choose a Fan Profile")
+choice=$(printf "%s\n" "${menu_options[@]}" | walker -d -p "Choose a Fan Profile")
 
 # Handle selection
 case "$choice" in
