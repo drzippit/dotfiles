@@ -5,6 +5,7 @@ options=(
     "Suspend"
     "Reboot"
     "Power off"
+    "Logout"
 )
 
 # Show menu with Walker
@@ -20,6 +21,9 @@ case "$choice" in
     ;;
   *Power*)
     poweroff
+    ;;
+  *Logout*)
+    hyprctl dispatch exit
     ;;
   *)
     echo "No valid choice."

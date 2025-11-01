@@ -6,6 +6,7 @@ options=(
     "Power Profiles"
     "Screenshots"
     "System menu"
+    "Restart menu"
 )
 
 # Show menu with Walker
@@ -24,6 +25,9 @@ case "$choice" in
     ;;
   *System*)
     $HOME/.local/bin/systemmenu
+    ;;
+  *Restart*)
+    $HOME/.local/bin/restartmenu
     ;;
   *)
     echo "No valid choice."
