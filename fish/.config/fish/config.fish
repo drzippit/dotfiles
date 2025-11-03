@@ -49,6 +49,8 @@ alias ll='eza -l --color=always --group-directories-first --icons'  # long forma
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
 # Common use
 alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
@@ -73,6 +75,9 @@ alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'          # List amount of -gi
 alias update='sudo pacman -Syu'
 
 alias cd="z"
+alias n="nvim"
+alias nv="nvim"
+alias vim="nvim"
 
 # Get fastest mirrors
 alias mirror="sudo cachyos-rate-mirrors"
