@@ -2,3 +2,5 @@ tmux/.config/tmux/plugins
 zsh/.config/zsh/zsh_plugins.zsh
 **/lazy-lock.json
 bin/.local/bin/lvim
+yazi/.config/yazi/gvfs.private
+yazi/.config/yazi/plugins
