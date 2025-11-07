@@ -1,0 +1,80 @@
+[general]
+destination = "$HOME/.config/hypr/config/monitor.conf"
+post_apply_exec = "waypaper --restore"
+
+[power_events]
+
+[power_events.dbus_query_object]
+path = "/org/freedesktop/UPower/devices/line_power_ACAD"
+
+[[power_events.dbus_signal_match_rules]]
+object_path = "/org/freedesktop/UPower/devices/line_power_ACAD"
+
+[lid_events]
+
+# how to query for the current up-to-date lid state
+[lid_events.dbus_query_object]
+destination = "org.freedesktop.UPower"
+path = "/org/freedesktop/UPower"
+method = "org.freedesktop.DBus.Properties.Get"
+# When the call returns a value:
+# $ gdbus call --system --dest org.freedesktop.UPower --object-path /org/freedesktop/UPower --method org.freedesktop.DBus.Properties.Get org.freedesktop.UPower LidIsClosed
+# $ (<false>,)
+# the received variant is cast as string and compared with the following value, when the comparison is true the internal state will reflect the lid closing event
+expected_lid_closing_value = "true"
+
+[[lid_events.dbus_query_object.args]]
+arg = "org.freedesktop.UPower"
+
+[[lid_events.dbus_query_object.args]]
+arg = "LidIsClosed"
+
+# which signals to match
+[[lid_events.dbus_signal_match_rules]]
+interface = "org.freedesktop.DBus.Properties"
+object_path = "/org/freedesktop/UPower"
+member = "PropertiesChanged"
+
+# receive filters
+[[lid_events.dbus_signal_receive_filters]]
+name = "org.freedesktop.DBus.Properties.PropertiesChanged"
+body = "LidIsClosed"
+
+[profiles.laptop]
+config_file = "/home/mvantol/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
+config_file_type = "template"
+[profiles.laptop.conditions]
+
+[[profiles.laptop.conditions.required_monitors]]
+description = "BOE NE135A1M-NY1"
+monitor_tag = "monitor0"
+
+
+[profiles.externalonly]
+config_file = "/home/mvantol/.config/hyprdynamicmonitors/hyprconfigs/externalonly.go.tmpl"
+config_file_type = "template"
+[profiles.externalonly.conditions]
+lid_state = "Closed"
+
+[[profiles.externalonly.conditions.required_monitors]]
+description = "BOE NE135A1M-NY1"
+monitor_tag = "monitor0"
+
+[[profiles.externalonly.conditions.required_monitors]]
+description = "Philips Consumer Electronics Company PHL 346B1C 0x00002FE5"
+monitor_tag = "monitor1"
+
+
+[profiles.laptopopenandexternal]
+config_file = "/home/mvantol/.config/hyprdynamicmonitors/hyprconfigs/laptopopenandexternal.go.tmpl"
+config_file_type = "template"
+[profiles.laptopopenandexternal.conditions]
+lid_state = "Opened"
+
+[[profiles.laptopopenandexternal.conditions.required_monitors]]
+description = "BOE NE135A1M-NY1"
+monitor_tag = "monitor0"
+
+[[profiles.laptopopenandexternal.conditions.required_monitors]]
+description = "Philips Consumer Electronics Company PHL 346B1C 0x00002FE5"
+monitor_tag = "monitor1"
