@@ -98,6 +98,6 @@ fish_add_path -m ~/.local/bin
 
 # overwrite greeting
 # potentially disabling fastfetch
-#function fish_greeting
+function fish_greeting
 #    # smth smth
-#end
+end
