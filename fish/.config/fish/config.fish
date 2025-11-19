@@ -98,11 +98,10 @@ fish_add_path -m ~/.local/bin
 
 # overwrite greeting
 # potentially disabling fastfetch
-#function fish_greeting
+function fish_greeting
 #    # smth smth
-#end
+end
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /home/mvantol/.lmstudio/bin
 # End of LM Studio CLI section
-
