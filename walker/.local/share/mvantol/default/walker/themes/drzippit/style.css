@@ -115,3 +115,43 @@ child:selected .item-box * {
 .preview {
   background: @background;
 }
+
+.keybinds {
+  padding-top: 10px;
+  border-top: 1px solid lighter(@window_bg_color);
+  font-size: 12px;
+  color: @theme_fg_color;
+}
+
+.global-keybinds {
+}
+
+.item-keybinds {
+  font-size: 0;
+}
+
+.keybind {
+  font-size: 0;
+}
+
+.keybind-button {
+  font-size: 0;
+}
+
+.keybind-button:hover {
+  font-size: 0;
+}
+
+.keybind-bind {
+  font-size: 0;
+}
+
+.keybind-label {
+  font-size: 0;
+}
+
+.error {
+  padding: 10px;
+  background: @error_bg_color;
+  color: @error_fg_color;
+}

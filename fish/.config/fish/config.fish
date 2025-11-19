@@ -101,3 +101,8 @@ fish_add_path -m ~/.local/bin
 #function fish_greeting
 #    # smth smth
 #end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/mvantol/.lmstudio/bin
+# End of LM Studio CLI section
+
