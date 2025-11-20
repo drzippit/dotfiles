@@ -99,7 +99,7 @@ fish_add_path -m ~/.local/bin
 # overwrite greeting
 # potentially disabling fastfetch
 function fish_greeting
-#    # smth smth
+    fastfetch
 end
 
 # Added by LM Studio CLI (lms)
