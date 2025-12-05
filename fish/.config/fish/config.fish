@@ -41,6 +41,8 @@ function copy
     end
 end
 
+set -gx EDITOR nvim
+
 ## Useful aliases
 # Replace ls with eza
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
