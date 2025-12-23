@@ -4,6 +4,7 @@
 options=(
     "waybar"
     "Walker and Elephant"
+    "Pypr"
 )
 
 # Show menu with Walker
@@ -16,6 +17,9 @@ case "$choice" in
     ;;
   *walker*)
     restart_walker
+    ;;
+  *pypr*)
+    restart_pypr
     ;;
   *)
     echo "No valid choice."

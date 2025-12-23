@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# Terminate already running pypr instances
+pypr-client exit
+
+# wait 2 seconds
+wait 2
+
+# Launch main
+pypr & disown
+notify-send "Pypr restarted"
