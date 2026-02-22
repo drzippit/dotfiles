@@ -127,6 +127,8 @@ function pom
         || pom
 end
 
+export SSH_AUTH_SOCK=/home/mvantol/.ssh/proton-pass-agent.sock
+
 # overwrite greeting
 # potentially disabling fastfetch
 function fish_greeting
