@@ -80,6 +80,7 @@ alias cd="z"
 alias n="nvim"
 alias nv="nvim"
 alias vim="nvim"
+alias lvim="NVIM_APPNAME=nvim-lazy nvim"
 
 # Get fastest mirrors
 alias mirror="sudo cachyos-rate-mirrors"
