@@ -55,18 +55,12 @@ alias l.="eza -ah | grep -e '^\.'" # show only dotfiles
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # Common use
-alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
@@ -100,34 +94,6 @@ starship init fish | source
 
 fish_add_path -m ~/.local/bin
 fish_add_path -m /opt/homebrew/bin
-
-# Pomodoro Timer: https://gist.github.com/bashbunni/e311f07e100d51a883ab0414b46755fa
-function pom
-    set split $POMO_SPLIT
-    if ! test -n "$split"
-        set split $(gum choose "25/5" "50/10" "all done" --header "Choose a pomodoro split.")
-    end
-
-    switch $split
-        case 25/5
-            set work 25m
-            set break 5m
-        case 50/10
-            set work 50m
-            set break 10m
-        case 'all done'
-            return
-    end
-
-    timer $work && terminal-notifier -message Pomodoro \
-        -title 'Work Timer is up! Take a Break 😊' \
-        -sound Crystal
-
-    gum confirm "Ready for a break?" && timer $break && terminal-notifier -message Pomodoro \
-        -title 'Break is over! Get back to work 😬' \
-        -sound Crystal \
-        || pom
-end
 
 export SSH_AUTH_SOCK=/home/mvantol/.ssh/proton-pass-agent.sock
 
