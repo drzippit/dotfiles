@@ -6,6 +6,7 @@
 
 -- Source: ~/.config/hypr/config/colors.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("config.colors")
+local colors = require("config.colors")
 
 -- https://wiki.hyprland.org/Configuring/Variables/#general
 
@@ -15,8 +16,8 @@ hl.config({
 		gaps_out = 5,
 		border_size = 3,
 		col = {
-			active_border = cachylgreen,
-			inactive_border = cachymblue,
+			active_border = colors.cachylgreen,
+			inactive_border = colors.cachymblue,
 		},
 		layout = "dwindle",
 		snap = {
@@ -27,20 +28,20 @@ hl.config({
 	-- https://wiki.hyprland.org/Configuring/Variables/#group
 	group = {
 		col = {
-			border_active = cachydgreen,
-			border_inactive = cachylgreen,
-			border_locked_active = cachymgreen,
-			border_locked_inactive = cachydblue,
+			border_active = colors.cachydgreen,
+			border_inactive = colors.cachylgreen,
+			border_locked_active = colors.cachymgreen,
+			border_locked_inactive = colors.cachydblue,
 		},
 		-- https://wiki.hyprland.org/Configuring/Variables/#groupbar
 		groupbar = {
 			font_family = '"Fira Sans"',
-			text_color = cachydblue,
+			text_color = colors.cachydblue,
 			col = {
-				active = cachydgreen,
-				inactive = cachylgreen,
-				locked_active = cachymgreen,
-				locked_inactive = cachydblue,
+				active = colors.cachydgreen,
+				inactive = colors.cachylgreen,
+				locked_active = colors.cachymgreen,
+				locked_inactive = colors.cachydblue,
 			},
 		},
 	},
@@ -50,9 +51,9 @@ hl.config({
 		splash_font_family = '"Fira Sans"',
 		disable_hyprland_logo = true,
 		col = {
-			splash = cachylgreen,
+			splash = colors.cachylgreen,
 		},
-		background_color = cachydblue,
+		background_color = colors.cachydblue,
 		enable_swallow = true,
 		swallow_regex = "^(nautilus|nemo|thunar|btrfs-assistant.)$",
 		focus_on_activate = true,
